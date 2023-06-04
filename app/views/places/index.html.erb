@@ -1,10 +1,17 @@
 <h1>Places</h1>
 
 <ul>
-  <% for place in @places %>
-    <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
-  <% end %>
+  <div class="grid gap-0 row-gap-3">
+    <% for place in @places %>
+      <li>
+      <div class="p-2 g-col-6">
+      <a class="link-opacity-50-hover" href="/places/<%= place["id"] %>"><%= place["name"] %></a>
+      </div>
+      </li>
+    <% end %>
+  </div>  
 </ul>
+
 
 <p>
     <a class="btn btn-primary" href="/places/new" role="button">New Place</a>
